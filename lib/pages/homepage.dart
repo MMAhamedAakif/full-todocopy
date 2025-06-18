@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todocopy/pages/homepage_widget/container_task.dart';
+import 'package:todocopy/pages/homepage_widget/inProgress.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -41,6 +42,7 @@ class Homepage extends StatelessWidget {
                 ),
                 SizedBox(height: 20.0),
                 view_task(),
+                inprogress(),
               ],
             ),
           ],

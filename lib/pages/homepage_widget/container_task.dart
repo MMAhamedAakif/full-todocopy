@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 // ignore: camel_case_types
 class view_task extends StatelessWidget {
@@ -44,6 +45,37 @@ class view_task extends StatelessWidget {
               ],
             ),
             Spacer(),
+
+            //*new widget
+            CircularPercentIndicator(
+              radius: 30.0,
+              animation: true,
+              animationDuration: 1200,
+
+              lineWidth: 8.0,
+              percent: 0.85,
+              header: Text(
+                "Icon header",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              circularStrokeCap: CircularStrokeCap.butt,
+              backgroundColor: Colors.white,
+              center: Text(
+                "85%",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              progressColor: Colors.lightGreen,
+              // progressBorderColor: Colors.white,
+            ),
+
+            SizedBox(width: 10.0),
+
             IconButton(
               focusColor: Colors.white,
               hoverColor: const Color.fromARGB(255, 13, 92, 156),
