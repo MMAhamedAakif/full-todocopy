@@ -16,7 +16,7 @@ class view_task extends StatelessWidget {
       height: 125,
       // color: Colors.blueAccent,
       child: Padding(
-        padding: const EdgeInsets.all(14.0),
+        padding: const EdgeInsets.all(12.0),
         child: Row(
           children: [
             Column(
@@ -61,7 +61,7 @@ class view_task extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              circularStrokeCap: CircularStrokeCap.butt,
+              circularStrokeCap: CircularStrokeCap.round,
               backgroundColor: Colors.white,
               center: Text(
                 "85%",
@@ -70,21 +70,45 @@ class view_task extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              progressColor: Colors.lightGreen,
+              footer: Text(
+                "Almost done",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              progressColor: const Color.fromARGB(255, 80, 229, 88),
               // progressBorderColor: Colors.white,
             ),
 
             SizedBox(width: 10.0),
 
-            IconButton(
-              focusColor: Colors.white,
-              hoverColor: const Color.fromARGB(255, 13, 92, 156),
-              highlightColor: Colors.white24,
-              splashColor: const Color.fromARGB(255, 167, 56, 56),
-              disabledColor: Colors.green,
+            Column(
+              children: [
+                IconButton(
+                  focusColor: Colors.white,
+                  hoverColor: Colors.blue[900],
+                  highlightColor: Colors.white60,
+                  splashColor: Colors.white,
+                  disabledColor: Colors.blueAccent,
 
-              onPressed: () {},
-              icon: Icon(Icons.add, color: Colors.white),
+                  onPressed: () {},
+                  icon: Icon(Icons.more_horiz, color: Colors.white),
+                ),
+
+                SizedBox(height: 8.0),
+
+                IconButton(
+                  focusColor: Colors.white,
+                  hoverColor: const Color.fromARGB(255, 13, 92, 156),
+                  highlightColor: Colors.white24,
+                  splashColor: const Color.fromARGB(255, 167, 56, 56),
+                  disabledColor: Colors.green,
+
+                  onPressed: () {},
+                  icon: Icon(Icons.add, color: Colors.white),
+                ),
+              ],
             ),
           ],
         ),
