@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pretty_animated_text/pretty_animated_text.dart';
 import 'package:glow_container/glow_container.dart';
 import 'package:todocopy/container/homepage_widget/bottomNavigationbar.dart';
+import 'package:todocopy/pages/favoritePage.dart';
 import 'package:todocopy/pages/newHome.dart';
 
 class calendarPage extends StatelessWidget {
@@ -15,7 +16,7 @@ class calendarPage extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Newhome()),
+              MaterialPageRoute(builder: (context) => Favoritepage()),
             );
           },
           icon: Icon(Icons.arrow_back),
