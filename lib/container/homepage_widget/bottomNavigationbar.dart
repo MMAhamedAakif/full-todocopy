@@ -48,9 +48,10 @@ class _HomepageState extends State<Homepage> {
         autofocus: true,
         splashColor: Colors.purpleAccent,
         onPressed: () {
-          setState(() {
-            addingPage();
-          });
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => addingPage()),
+          );
         },
         backgroundColor: Colors.deepPurple,
         child: Icon(Icons.add, color: Colors.white),

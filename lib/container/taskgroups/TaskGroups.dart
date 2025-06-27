@@ -15,7 +15,15 @@ class Taskgroups extends StatelessWidget {
       height: 80,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.0),
-        color: Colors.blue[100],
+        gradient: LinearGradient(
+          colors: [
+            const Color.fromARGB(255, 225, 13, 158).withOpacity(0.2),
+            const Color.fromARGB(255, 30, 11, 245).withOpacity(0.2),
+            const Color.fromARGB(255, 8, 211, 234).withOpacity(0.2),
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
       ),
 
       child: Row(

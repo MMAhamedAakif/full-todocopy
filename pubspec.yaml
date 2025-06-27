@@ -36,6 +36,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   percent_indicator: ^4.2.5
   animated_bottom_navigation_bar: ^1.4.0
+  pretty_animated_text: ^2.0.0
+  flutter_animate: ^4.5.2
+  glow_container: ^1.0.1
 
 
 dev_dependencies:

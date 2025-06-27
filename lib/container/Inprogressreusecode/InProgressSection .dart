@@ -63,24 +63,24 @@ class _InProgressSectionState extends State<InProgressSection> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          padding: EdgeInsets.symmetric(vertical: 6),
           child: Text(
             "In Progress ",
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
         ),
         SizedBox(
-          height: 120,
+          height: 135,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.symmetric(horizontal: 12),
+            padding: const EdgeInsets.symmetric(horizontal: 0),
             itemCount: tasks.length,
             itemBuilder: (context, index) {
               final task = tasks[index];
               return Padding(
                 padding: const EdgeInsets.only(right: 12.0),
                 child: Container(
-                  width: 350,
+                  width: 250,
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
                     color: task.containerColor,
@@ -125,7 +125,7 @@ class _InProgressSectionState extends State<InProgressSection> {
                       LinearPercentIndicator(
                         restartAnimation: true,
                         addAutomaticKeepAlive: true,
-                        width: 300.0,
+                        width: 200.0,
                         fillColor: Colors.transparent,
                         padding: EdgeInsets.zero,
                         backgroundColor: task.backgroundColor,

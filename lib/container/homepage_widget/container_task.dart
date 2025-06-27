@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:pretty_animated_text/pretty_animated_text.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:glow_container/glow_container.dart';
+import 'package:todocopy/pages/calendarPage.dart';
 
 // ignore: camel_case_types
 class view_task extends StatelessWidget {
@@ -10,7 +14,16 @@ class view_task extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        color: Color(0xFF7B61FF),
+        // color: Color(0xFF7B61FF),
+        gradient: LinearGradient(
+          colors: [
+            const Color.fromARGB(255, 225, 13, 158),
+            const Color.fromARGB(255, 30, 11, 245),
+            const Color.fromARGB(255, 8, 211, 234),
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
       ),
       width: double.infinity,
       height: 125,
@@ -22,25 +35,50 @@ class view_task extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "Your today's task \n almost done!",
-                  style: TextStyle(
+                BlurText(
+                  text: "Your today's task ",
+                  duration: const Duration(milliseconds: 1250),
+                  type: AnimationType.word,
+                  textStyle: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
                     color: Colors.white,
-                    fontSize: 17,
-                    fontWeight: FontWeight.normal,
+                  ),
+                ),
+                BlurText(
+                  text: " almost done!",
+                  duration: const Duration(milliseconds: 1750),
+                  type: AnimationType.word,
+                  textStyle: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
                 ),
 
                 SizedBox(height: 16),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => calendarPage()),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
                   ),
-                  child: Text(
-                    "View Task",
-                    style: TextStyle(color: Color(0xFF7B61FF)),
-                  ),
+                  child:
+                      Text(
+                            "View Task",
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          )
+                          .animate()
+                          .fadeIn(duration: 600.ms)
+                          .then(delay: 200.ms) // baseline=800ms
+                          .slide(),
                 ),
               ],
             ),

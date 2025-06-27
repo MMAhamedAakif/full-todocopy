@@ -15,23 +15,25 @@ class _NewhomeState extends State<Newhome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(18.0),
-        child: ListView(
-          children: [
-            Column(
-              children: [
-                Profilepic(),
-                SizedBox(height: 20.0),
-                view_task(),
-                SizedBox(height: 15.0),
-                // Addprogressdata(),
-                InProgressSection(),
-                SizedBox(height: 15.0),
-                Task_groups(),
-              ],
-            ),
-          ],
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15.0),
+
+          child: ListView(
+            children: [
+              Column(
+                children: [
+                  Profilepic(),
+                  SizedBox(height: 20.0),
+                  view_task(),
+                  SizedBox(height: 15.0),
+                  InProgressSection(),
+                  SizedBox(height: 15.0),
+                  Task_groups(),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
