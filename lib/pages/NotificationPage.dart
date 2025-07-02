@@ -1,37 +1,22 @@
-import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
-import 'package:glow_container/glow_container.dart';
-import 'package:todocopy/pages/NotificationPage.dart';
+import 'package:glow_container/glow_container.dart'
+    show ContainerOptions, GlowContainer, GlowLocation;
 
-class calendarPage extends StatelessWidget {
-  const calendarPage({super.key});
+class Notificationpage extends StatelessWidget {
+  const Notificationpage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("Calendar Page ")),
-        actions: [
-          Padding(
-            padding: EdgeInsets.only(right: 26.0),
-            child: badges.Badge(
-              position: badges.BadgePosition.topEnd(top: 2, end: 2),
-              badgeContent: Text("3", style: TextStyle(fontSize: 8)),
-              child: IconButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Notificationpage()),
-                  );
-                },
-                icon: Icon(Icons.notifications, color: Colors.deepPurple),
-                tooltip: "new messages",
-              ),
-            ),
+        title: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Text(
+            "Notification Page",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
           ),
-        ],
+        ),
       ),
-
       body: Center(
         child: GlowContainer(
           glowRadius: 30,
@@ -58,7 +43,7 @@ class calendarPage extends StatelessWidget {
                 Column(
                   children: [
                     Text(
-                      'Start New Things ',
+                      'New Notification to view ',
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 18.0,

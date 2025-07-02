@@ -4,7 +4,6 @@ import 'package:todocopy/pages/favoritePage.dart';
 import 'package:todocopy/pages/setting.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:todocopy/pages/newHome.dart';
-import 'package:todocopy/pages/AddingPage.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -44,16 +43,18 @@ class _HomepageState extends State<Homepage> {
       body: _pages[_selectedIndex],
       floatingActionButton: FloatingActionButton(
         isExtended: true,
-        focusColor: Colors.deepPurple[500],
+
+        focusColor: Color.fromARGB(255, 30, 11, 245),
         autofocus: true,
-        splashColor: Colors.purpleAccent,
+        splashColor: Colors.blue,
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => addingPage()),
-          );
+          Navigator.pushNamed(context, '/addingPage');
+          // Navigator.push(
+          //   context,
+          //   MaterialPageRoute(builder: (context) => addingPage()),
+          // );
         },
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.tealAccent,
         child: Icon(Icons.add, color: Colors.white),
       ),
       floatingActionButtonLocation:
@@ -62,7 +63,9 @@ class _HomepageState extends State<Homepage> {
       bottomNavigationBar: AnimatedBottomNavigationBar(
         splashRadius: 34,
         height: 60,
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Color.fromARGB(255, 8, 211, 234),
+        // borderColor: Colors.blueGrey,
+        blurEffect: true,
         splashColor: Colors.deepPurple,
         splashSpeedInMilliseconds: 400,
         elevation: 0,
@@ -76,8 +79,8 @@ class _HomepageState extends State<Homepage> {
         onTap:
             (index) =>
                 _onItemTapped(index), // ✅ Now calls the function properly
-        activeColor: Colors.purple,
-        inactiveColor: Colors.white,
+        activeColor: Color.fromARGB(255, 30, 11, 245),
+        inactiveColor: Colors.pink[100],
 
         icons: iconList,
       ),

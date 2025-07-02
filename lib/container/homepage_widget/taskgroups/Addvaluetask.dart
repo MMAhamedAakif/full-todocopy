@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:todocopy/container/taskgroups/TaskGroups.dart';
-import 'package:todocopy/container/taskgroups/taskgroupdata.dart';
+import 'package:todocopy/container/homepage_widget/taskgroups/TaskGroups.dart';
+import 'package:todocopy/container/homepage_widget/taskgroups/taskgroupdata.dart';
 
 class Task_groups extends StatelessWidget {
   const Task_groups({super.key});

@@ -39,6 +39,9 @@ dependencies:
   pretty_animated_text: ^2.0.0
   flutter_animate: ^4.5.2
   glow_container: ^1.0.1
+  stylish_bottom_bar: ^1.1.1
+  badges: ^3.1.2
+  stacked_list_carousel: ^1.1.0
 
 
 dev_dependencies:

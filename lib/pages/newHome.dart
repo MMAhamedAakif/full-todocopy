@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:todocopy/container/Inprogressreusecode/InProgressSection%20.dart';
+import 'package:todocopy/container/homepage_widget/Inprogressreusecode/InProgressSection%20.dart';
 import 'package:todocopy/container/homepage_widget/profilepic.dart';
 import 'package:todocopy/container/homepage_widget/container_task.dart';
-import 'package:todocopy/container/taskgroups/Addvaluetask.dart';
+import 'package:todocopy/container/homepage_widget/taskgroups/Addvaluetask.dart';
 
 class Newhome extends StatefulWidget {
   const Newhome({super.key});

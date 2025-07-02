@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:pretty_animated_text/pretty_animated_text.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:glow_container/glow_container.dart';
-import 'package:todocopy/pages/calendarPage.dart';
+import 'package:todocopy/pages/AddingPage.dart';
 
 // ignore: camel_case_types
 class view_task extends StatelessWidget {
@@ -61,7 +60,7 @@ class view_task extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => calendarPage()),
+                      MaterialPageRoute(builder: (context) => addingPage()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
