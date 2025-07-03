@@ -1,5 +1,8 @@
+import 'dart:ui' show ImageFilter;
+
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart' as badges;
+import 'package:todocopy/adding%20page%20containers/selectTask.dart';
 import 'package:todocopy/pages/NotificationPage.dart';
 
 class addingPage extends StatelessWidget {
@@ -11,9 +14,11 @@ class addingPage extends StatelessWidget {
       appBar: AppBar(
         title: Padding(
           padding: const EdgeInsets.all(16.0),
-          child: Text(
-            "Add Project",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26),
+          child: Center(
+            child: Text(
+              "Add Project",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26),
+            ),
           ),
         ),
         actions: [
@@ -36,7 +41,28 @@ class addingPage extends StatelessWidget {
           ),
         ],
       ),
-      body: Padding(padding: const EdgeInsets.all(16.0), child: Container()),
+
+      body: Stack(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: NetworkImage(
+                  "https://files.123freevectors.com/wp-content/original/154027-abstract-blue-and-white-background-design.jpg",
+                ),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+
+          BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+            child: Container(color: Colors.black.withOpacity(0)),
+          ),
+          Padding(padding: const EdgeInsets.all(16.0), child: Selecttask()),
+        ],
+      ),
+      // body: Padding(padding: const EdgeInsets.all(16.0), child: Selecttask()),
     );
   }
 }

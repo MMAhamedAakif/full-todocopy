@@ -5,7 +5,9 @@ import 'package:todocopy/container/homepage_widget/container_task.dart';
 import 'package:todocopy/container/homepage_widget/taskgroups/Addvaluetask.dart';
 
 class Newhome extends StatefulWidget {
-  const Newhome({super.key});
+  const Newhome({super.key, this.onThemechanged});
+
+  final VoidCallback? onThemechanged;
 
   @override
   State<Newhome> createState() => _NewhomeState();
@@ -15,6 +17,10 @@ class _NewhomeState extends State<Newhome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: widget.onThemechanged,
+        child: const Icon(Icons.color_lens),
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0),

@@ -87,7 +87,7 @@ class view_task extends StatelessWidget {
             CircularPercentIndicator(
               radius: 30.0,
               animation: true,
-              animationDuration: 1200,
+              animationDuration: 2000,
 
               lineWidth: 8.0,
               percent: 0.85,

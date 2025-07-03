@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:todocopy/pages/NotificationPage.dart';
+import 'package:todocopy/pages/profilepage.dart';
 
 class Profilepic extends StatelessWidget {
   const Profilepic({super.key});
@@ -11,12 +12,27 @@ class Profilepic extends StatelessWidget {
       padding: const EdgeInsets.only(top: 18.0),
       child: Row(
         children: [
-          CircleAvatar(
-            backgroundColor: Colors.blue,
-            radius: 28.0,
-            backgroundImage: NetworkImage(
-              "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Profilepage(),
+                ), // <-- your profile page
+                
+              );
+            },
+            child: CircleAvatar(
+              
+              backgroundColor: Colors.black,
+              radius: 28.0,
+              backgroundImage: NetworkImage(
+                "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
+              ),
+              
+              
             ),
+            
           ),
 
           SizedBox(width: 10.0),

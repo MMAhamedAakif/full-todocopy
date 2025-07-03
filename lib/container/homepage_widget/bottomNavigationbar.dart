@@ -6,7 +6,7 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:todocopy/pages/newHome.dart';
 
 class Homepage extends StatefulWidget {
-  const Homepage({super.key});
+  const Homepage({super.key, required void Function() onThemechanged});
 
   @override
   State<Homepage> createState() => _HomepageState();
@@ -54,7 +54,7 @@ class _HomepageState extends State<Homepage> {
           //   MaterialPageRoute(builder: (context) => addingPage()),
           // );
         },
-        backgroundColor: Colors.tealAccent,
+        backgroundColor: const Color.fromARGB(255, 27, 9, 166),
         child: Icon(Icons.add, color: Colors.white),
       ),
       floatingActionButtonLocation:
