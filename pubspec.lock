@@ -168,6 +168,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.1"
+  linear_gradient:
+    dependency: "direct main"
+    description:
+      name: linear_gradient
+      sha256: "5af4eff36cccebccffe269135ee8d7d1bfc4da746441c0e65035eb69344ba038"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.13"
   lints:
     dependency: transitive
     description:

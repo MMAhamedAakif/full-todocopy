@@ -45,16 +45,16 @@ class Notificationpage extends StatelessWidget {
                 child: Column(
                   // mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    SizedBox(
+                      height: 200,
+                      width: double.infinity,
+                      child: Image.network(
+                        "https://media.istockphoto.com/id/1173450044/vector/secretary-receptionist-office-worker-character-working-vector-flat-cartoon-graphic-design.jpg?s=612x612&w=0&k=20&c=lIQ0Y7S191js9iyDyUqHVJXkSVeX1G-tlmbDxOWgT18=",
+                        fit: BoxFit.contain,
+                      ),
+                    ),
                     Column(
                       children: [
-                        Text(
-                          'New Notification to view ',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
                         Row(
                           mainAxisSize: MainAxisSize.max,
                           children: <Widget>[
@@ -89,28 +89,91 @@ class Notificationpage extends StatelessWidget {
                                     textStyle: TextStyle(color: Colors.blue),
                                   ),
                                 ],
-                                onTap: () {
-                                  print("Tap Event");
-                                },
+                                onTap: () {},
                               ),
                             ),
                           ],
                         ),
-
-                        SizedBox(
-                          width: 400.0,
-                          child: TextLiquidFill(
-                            text: 'MESSAGE',
-                            waveColor: Colors.lightBlue,
-                            boxBackgroundColor: Colors.black,
-                            textStyle: TextStyle(
-                              fontSize: 50.0,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'ethnocentric',
-                            ),
-                            boxHeight: 87.0,
+                        Container(
+                          padding: EdgeInsets.only(
+                            left: 20,
+                            right: 20,
+                            top: 10,
+                            bottom: 10,
+                          ),
+                          height: 70,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.red[100],
+                          ),
+                          child: Text(
+                            "Message 1 ",
+                            style: TextStyle(fontSize: 20),
                           ),
                         ),
+
+                        SizedBox(height: 10),
+                        Container(
+                          padding: EdgeInsets.only(
+                            left: 20,
+                            right: 20,
+                            top: 10,
+                            bottom: 10,
+                          ),
+                          height: 70,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.red[100],
+                          ),
+                          child: Text(
+                            "Message 2 ",
+                            style: TextStyle(fontSize: 20),
+                          ),
+                        ),
+
+                        SizedBox(height: 10),
+                        Container(
+                          padding: EdgeInsets.only(
+                            left: 20,
+                            right: 20,
+                            top: 10,
+                            bottom: 10,
+                          ),
+                          height: 70,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.red[100],
+                          ),
+                          child: Text(
+                            "Message 3 ",
+                            style: TextStyle(fontSize: 20),
+                          ),
+                        ),
+
+                        SizedBox(height: 10),
+                        Container(
+                          padding: EdgeInsets.only(
+                            left: 20,
+                            right: 20,
+                            top: 10,
+                            bottom: 10,
+                          ),
+                          height: 70,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.red[100],
+                          ),
+                          child: Text(
+                            "Message 4 ",
+                            style: TextStyle(fontSize: 20),
+                          ),
+                        ),
+
+                        SizedBox(height: 10),
                       ],
                     ),
                   ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todocopy/pages/calendarPage.dart';
 import 'package:todocopy/pages/favoritePage.dart';
-import 'package:todocopy/pages/setting.dart';
+import 'package:todocopy/pages/profile.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:todocopy/pages/newHome.dart';
 
@@ -19,7 +19,7 @@ class _HomepageState extends State<Homepage> {
     Icons.home,
     Icons.calendar_month,
     Icons.favorite_sharp,
-    Icons.settings,
+    Icons.person_pin,
   ];
 
   //*list of pages for each tab
@@ -28,7 +28,7 @@ class _HomepageState extends State<Homepage> {
     Newhome(),
     calendarPage(),
     Favoritepage(),
-    SettingPage(),
+    Profile(),
   ]; //*
 
   void _onItemTapped(int index) {
@@ -42,11 +42,12 @@ class _HomepageState extends State<Homepage> {
     return Scaffold(
       body: _pages[_selectedIndex],
       floatingActionButton: FloatingActionButton(
+        tooltip: "new page ",
         isExtended: true,
 
-        focusColor: Color.fromARGB(255, 30, 11, 245),
+        focusColor: Color(0xFF006A60),
         autofocus: true,
-        splashColor: Colors.blue,
+        splashColor: Color(0xFFBBEDE6),
         onPressed: () {
           Navigator.pushNamed(context, '/addingPage');
           // Navigator.push(
@@ -54,7 +55,7 @@ class _HomepageState extends State<Homepage> {
           //   MaterialPageRoute(builder: (context) => addingPage()),
           // );
         },
-        backgroundColor: const Color.fromARGB(255, 27, 9, 166),
+        backgroundColor: const Color(0xFF4A635F),
         child: Icon(Icons.add, color: Colors.white),
       ),
       floatingActionButtonLocation:
@@ -63,10 +64,10 @@ class _HomepageState extends State<Homepage> {
       bottomNavigationBar: AnimatedBottomNavigationBar(
         splashRadius: 34,
         height: 60,
-        backgroundColor: Color.fromARGB(255, 8, 211, 234),
+        backgroundColor: Color(0xFFDFE0FF),
         // borderColor: Colors.blueGrey,
         blurEffect: true,
-        splashColor: Colors.deepPurple,
+        splashColor: Color(0xFF48617A),
         splashSpeedInMilliseconds: 400,
         elevation: 0,
         activeIndex: _selectedIndex,
@@ -79,8 +80,8 @@ class _HomepageState extends State<Homepage> {
         onTap:
             (index) =>
                 _onItemTapped(index), // ✅ Now calls the function properly
-        activeColor: Color.fromARGB(255, 30, 11, 245),
-        inactiveColor: Colors.pink[100],
+        activeColor: Color(0xFF006A60),
+        inactiveColor: Color(0xFF90DBE5),
 
         icons: iconList,
       ),

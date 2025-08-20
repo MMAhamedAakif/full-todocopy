@@ -10,6 +10,14 @@ class Selecttask extends StatelessWidget {
       children: [
         Column(
           children: [
+            SizedBox(
+              width: double.infinity,
+              height: 200,
+              child: Image.network(
+                "https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-tiny-author-with-pencil-writing-png-image_6319533.png",
+                fit: BoxFit.cover,
+              ),
+            ),
             Container(
               width: double.infinity,
               height: 80.0,
@@ -246,7 +254,7 @@ class Selecttask extends StatelessWidget {
                   onPressed: () {},
 
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blueGrey[100],
+                    backgroundColor: Color(0xFFA1EFFF),
                   ),
                   child:
                       Text(
@@ -254,7 +262,7 @@ class Selecttask extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.bold,
-                              color: Colors.deepPurple[800],
+                              color: Color(0xFF006A60),
                             ),
                           )
                           .animate()
@@ -274,7 +282,7 @@ class Selecttask extends StatelessWidget {
 
                 elevation: 0,
                 shadowColor: Colors.black,
-                backgroundColor: Colors.blue[800],
+                backgroundColor: Color(0xFF006876),
               ),
               child:
                   Text(

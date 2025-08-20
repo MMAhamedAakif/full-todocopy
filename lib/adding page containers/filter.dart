@@ -23,6 +23,7 @@ class Filter extends StatelessWidget {
 
           BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 30.0, sigmaY: 30.0),
+            // ignore: deprecated_member_use
             child: Container(color: Colors.black.withOpacity(0)),
           ),
         ],

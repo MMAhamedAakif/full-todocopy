@@ -13,9 +13,9 @@ class Favoritepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.pink[50],
         title: Center(
-          child: Text("Favorit Page", style: TextStyle(color: Colors.white)),
+          child: Text("Favorit ", style: TextStyle(color: Color(0xFF006876))),
         ),
         actions: [
           Padding(
@@ -48,7 +48,7 @@ class Favoritepage extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: NetworkImage(
-                  "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
+                  "https://marketplace.canva.com/EAGMGLapir8/1/0/1131w/canva-pink-watercolor-background-document-UskfOyW0p2Y.jpg",
                 ),
                 fit: BoxFit.cover,
               ),
@@ -56,65 +56,190 @@ class Favoritepage extends StatelessWidget {
           ),
 
           BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+            filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
+            // ignore: deprecated_member_use
             child: Container(color: Colors.black.withOpacity(0)),
           ),
 
-          Column(
+          ListView(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(22.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(23),
-                    color: Colors.white70,
-                  ),
-
-                  width: double.infinity,
-                  height: 100,
-
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Center(
-                      child: BlurText(
-                        text:
-                            'Lorem ipsum dolor sit amet get new look for the page and guide me this way !!!',
-                        duration: const Duration(seconds: 1),
-                        type: AnimationType.word,
-                        textStyle: const TextStyle(
-                          fontSize: 20,
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
+              Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(22.0),
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 250,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child: Image.network(
+                            "https://png.pngtree.com/png-clipart/20230824/original/pngtree-wish-list-create-write-and-check-couple-vector-picture-image_8453947.png",
+                            fit: BoxFit.contain,
+                          ),
                         ),
-                      ),
 
-                      // child: Text("new  Favorite page ", style: TextStyle(fontSize: 25)),
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(23),
+                            color: Colors.pink[100],
+                          ),
+
+                          width: double.infinity,
+                          height: 80,
+
+                          child: Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Center(
+                              child: BlurText(
+                                text:
+                                    'get new look for the page and guide me this way !!!',
+                                duration: const Duration(seconds: 1),
+                                type: AnimationType.word,
+                                textStyle: const TextStyle(
+                                  fontSize: 20,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+
+                              // child: Text("new  Favorite page ", style: TextStyle(fontSize: 25)),
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 20),
+
+                        Container(
+                          padding: EdgeInsets.only(
+                            left: 20,
+                            right: 20,
+                            top: 10,
+                            bottom: 10,
+                          ),
+                          height: 70,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.pink[50],
+                          ),
+                          child: Text(
+                            "favorite ",
+                            style: TextStyle(fontSize: 20),
+                          ),
+                        ),
+
+                        SizedBox(height: 10),
+
+                        Container(
+                          padding: EdgeInsets.only(
+                            left: 20,
+                            right: 20,
+                            top: 10,
+                            bottom: 10,
+                          ),
+                          height: 70,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.pink[50],
+                          ),
+                          child: Text(
+                            "favorite ",
+                            style: TextStyle(fontSize: 20),
+                          ),
+                        ),
+                        SizedBox(height: 10),
+
+                        Container(
+                          padding: EdgeInsets.only(
+                            left: 20,
+                            right: 20,
+                            top: 10,
+                            bottom: 10,
+                          ),
+                          height: 70,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.pink[50],
+                          ),
+                          child: Text(
+                            "favorite ",
+                            style: TextStyle(fontSize: 20),
+                          ),
+                        ),
+                        SizedBox(height: 10),
+
+                        Container(
+                          padding: EdgeInsets.only(
+                            left: 20,
+                            right: 20,
+                            top: 10,
+                            bottom: 10,
+                          ),
+                          height: 70,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.pink[50],
+                          ),
+                          child: Text(
+                            "favorite ",
+                            style: TextStyle(fontSize: 20),
+                          ),
+                        ),
+
+                        SizedBox(height: 10),
+
+                        Container(
+                          padding: EdgeInsets.only(
+                            left: 20,
+                            right: 20,
+                            top: 10,
+                            bottom: 10,
+                          ),
+                          height: 70,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.pink[50],
+                          ),
+                          child: Text(
+                            "favorite ",
+                            style: TextStyle(fontSize: 20),
+                          ),
+                        ),
+                        SizedBox(height: 10),
+
+                        Container(
+                          padding: EdgeInsets.only(
+                            left: 20,
+                            right: 20,
+                            top: 10,
+                            bottom: 10,
+                          ),
+                          height: 70,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.pink[50],
+                          ),
+                          child: Text(
+                            "favorite ",
+                            style: TextStyle(fontSize: 20),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                ),
+                ],
               ),
             ],
           ),
         ],
       ),
-
-      // body: Padding(
-      //   padding: const EdgeInsets.all(22.0),
-      //   child: Center(
-      //     child: BlurText(
-      //       text:
-      //           'Lorem ipsum dolor sit amet get new look for the page and guide me this way !!!',
-      //       duration: const Duration(seconds: 1),
-      //       type: AnimationType.word,
-      //       textStyle: const TextStyle(
-      //         fontSize: 25,
-      //         fontWeight: FontWeight.bold,
-      //       ),
-      //     ),
-
-      //     // child: Text("new  Favorite page ", style: TextStyle(fontSize: 25)),
-      //   ),
-      // ),
     );
   }
 }

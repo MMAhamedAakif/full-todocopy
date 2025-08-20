@@ -12,8 +12,9 @@ class addingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.lightBlueAccent,
         title: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Center(
             child: Text(
               "Add Project",
@@ -57,6 +58,7 @@ class addingPage extends StatelessWidget {
 
           BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+            // ignore: deprecated_member_use
             child: Container(color: Colors.black.withOpacity(0)),
           ),
           Padding(padding: const EdgeInsets.all(16.0), child: Selecttask()),

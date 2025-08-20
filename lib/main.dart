@@ -4,9 +4,9 @@ import 'package:todocopy/pages/AddingPage.dart';
 import 'package:todocopy/pages/calendarPage.dart';
 import 'package:todocopy/pages/favoritePage.dart';
 import 'package:todocopy/pages/newHome.dart';
-import 'package:todocopy/pages/setting.dart';
+import 'package:todocopy/pages/profile.dart';
 // ignore: depend_on_referenced_packages
-import 'package:flex_color_scheme/flex_color_scheme.dart';
+import 'package:todocopy/pages/startingPage.dart' show Startingpage;
 
 void main() {
   runApp(to_do_app());
@@ -40,10 +40,11 @@ class _to_do_appState extends State<to_do_app> {
       home: Homepage(onThemechanged: toggleTheme),
       // initialRoute: '/',
       routes: {
+        '/startingPage': (context) => const Startingpage(),
         '/newHomePage': (context) => const Newhome(),
         '/favoritePage': (context) => const Favoritepage(),
         '/calenderPage': (context) => const calendarPage(),
-        '/settingPage': (context) => const SettingPage(),
+        '/profilePage': (context) => const Profile(),
         '/addingPage': (context) => const addingPage(),
       },
     );

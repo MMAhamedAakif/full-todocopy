@@ -122,18 +122,7 @@ class view_task extends StatelessWidget {
 
             Column(
               children: [
-                IconButton(
-                  focusColor: Colors.white,
-                  hoverColor: Colors.blue[900],
-                  highlightColor: Colors.white60,
-                  splashColor: Colors.white,
-                  disabledColor: Colors.blueAccent,
-
-                  onPressed: () {},
-                  icon: Icon(Icons.more_horiz, color: Colors.white),
-                ),
-
-                SizedBox(height: 8.0),
+                SizedBox(height: 30.0),
 
                 IconButton(
                   focusColor: Colors.white,
@@ -142,7 +131,12 @@ class view_task extends StatelessWidget {
                   splashColor: const Color.fromARGB(255, 167, 56, 56),
                   disabledColor: Colors.green,
 
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => addingPage()),
+                    );
+                  },
                   icon: Icon(Icons.add, color: Colors.white),
                 ),
               ],
